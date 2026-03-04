@@ -1,27 +1,52 @@
 ---
-const { companyName } = Astro.props;
+const { companyName, phone, address } = Astro.props;
 ---
 
-<footer
-  class="bg-brand text-brand-fg text-md flex flex-col items-center justify-center border-t border-slate-900 p-8 text-center"
->
-  <p>&copy; <span id="year"></span> {companyName}. All Rights Reserved.</p>
-  <ul class="item-center flex justify-center gap-8 pt-6">
-    <li>
+<footer id="contact" class="bg-brand text-brand-fg border-t border-slate-900">
+  <div
+    class="mx-auto flex max-w-5xl flex-col gap-8 px-8 py-12 md:flex-row md:items-start md:justify-between"
+  >
+    <!-- Contact info -->
+    <div class="flex flex-col gap-1.5">
+      <p class="text-brand-fg font-semibold">{companyName}</p>
+      <a
+        href={`tel:${phone.replace(/\D/g, "")}`}
+        class="text-brand-fg-muted hover:text-brand-fg focus:ring-offset-brand transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+      >
+        {phone}
+      </a>
+      <p class="text-brand-fg-muted">{address}</p>
+    </div>
+
+    <!-- Legal -->
+    <div class="flex flex-col gap-3 md:items-center">
       <a
         href="/privacy-policy"
-        class="hover:text-brand-fg-muted focus:ring-offset-brand transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
-        >Privacy Policy</a
+        class="text-brand-fg-muted hover:text-brand-fg focus:ring-offset-brand transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+        >Designed by Oh of One Web Designs</a
       >
-    </li>
-    <li>
-      <a
-        href="/terms-of-use"
-        class="hover:text-brand-fg-muted focus:ring-offset-brand transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
-        >Terms of Use</a
-      >
-    </li>
-  </ul>
+      <p class="text-brand-fg-muted">
+        &copy; <span id="year"></span>
+        {companyName}. All Rights Reserved.
+      </p>
+      <ul class="flex w-full gap-6 md:justify-center">
+        <li>
+          <a
+            href="/privacy-policy"
+            class="text-brand-fg-muted hover:text-brand-fg focus:ring-offset-brand transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+            >Privacy Policy</a
+          >
+        </li>
+        <li>
+          <a
+            href="/terms-of-use"
+            class="text-brand-fg-muted hover:text-brand-fg focus:ring-offset-brand transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+            >Terms of Use</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
 </footer>
 
 <script>

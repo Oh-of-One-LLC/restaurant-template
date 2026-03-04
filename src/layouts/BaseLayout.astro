@@ -2,18 +2,12 @@
 import "../styles/global.css";
 import Header from "../components/header.astro";
 import Footer from "../components/footer/footer.astro";
-import { COMPANY_NAME as companyName, PHONE as phone } from "../config";
-
-const menuItems = [
-  {
-    name: "Menu",
-    href: "/#menu",
-  },
-  {
-    name: "Reservations",
-    href: "/#reservations",
-  },
-];
+import {
+  COMPANY_NAME as companyName,
+  PHONE as phone,
+  ADDRESS as address,
+} from "../config";
+import { MENU_ITEMS as headerMenuItems } from "../data/header";
 
 const logo = companyName;
 
@@ -35,13 +29,13 @@ const { pageTitle = companyName } = Astro.props;
 
   <body class="bg-background text-text min-h-full antialiased">
     <div class="flex min-h-screen flex-col" id="top">
-      <Header logo={logo} menuItems={menuItems} />
+      <Header logo={logo} menuItems={headerMenuItems} />
 
       <main class="max-w-90vw flex-1" role="main">
         <slot name="main" />
       </main>
 
-      <Footer companyName={companyName} phone={phone} />
+      <Footer companyName={companyName} phone={phone} address={address} />
     </div>
   </body>
 </html>
