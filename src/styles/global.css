@@ -6,28 +6,28 @@
    Used for primary sections: header, hero, footer.
    ============================================ */
 @theme {
-  --color-brand: #020618; /* Dark navy */
-  --color-brand-subtle: #0d1829; /* Nested brand surfaces */
-  --color-brand-fg: #ffffff; /* Text on brand bg */
-  --color-brand-fg-muted: #8fa8c8; /* Muted text on brand bg */
+  --color-brand: #1a0f07; /* Deep charcoal-brown, burnt wood */
+  --color-brand-subtle: #2a1a0c; /* Nested brand surfaces */
+  --color-brand-fg: #fdf0e0; /* Warm cream white on dark */
+  --color-brand-fg-muted: #c4956a; /* Caramel muted text on dark */
 }
 
 /* ============================================
    Semantic Colors — Light Mode (default)
    ============================================ */
 :root {
-  --color-bg: #f8f9fa; /* Page background */
-  --color-bg-surface: #ffffff; /* Cards, panels */
-  --color-bg-raised: #f1f3f5; /* Inputs, elevated surfaces */
+  --color-bg: #fdf5eb; /* Warm parchment page background */
+  --color-bg-surface: #fffdf8; /* Near-white with warm tint — cards, panels */
+  --color-bg-raised: #f5e8d5; /* Warm tan — inputs, elevated surfaces */
 
-  --color-tx: #0d0f14; /* Primary text */
-  --color-tx-muted: #64748b; /* Supporting text */
-  --color-tx-subtle: #717a8a; /* Placeholders, captions */
+  --color-tx: #1a0f07; /* Deep warm brown primary text */
+  --color-tx-muted: #7a5c3e; /* Medium warm brown supporting text */
+  --color-tx-subtle: #9e7d5e; /* Light warm brown — placeholders, captions */
 
-  --color-bd: #e2e8f0; /* Default border */
-  --color-bd-strong: #cbd5e0; /* Emphasized border */
+  --color-bd: #e8d0b0; /* Warm tan border */
+  --color-bd-strong: #d4b482; /* Deeper tan emphasized border */
 
-  --color-ac: #2563eb; /* Accent — CTAs, links */
+  --color-ac: #c44b1a; /* Terracotta / burnt orange — CTAs, links */
   --color-ac-fg: #ffffff; /* Text on accent bg */
 }
 
@@ -36,19 +36,19 @@
    ============================================ */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0d1526;
-    --color-bg-surface: #152035;
-    --color-bg-raised: #1e2d47;
+    --color-bg: #1a0f07;
+    --color-bg-surface: #251505;
+    --color-bg-raised: #342010;
 
-    --color-tx: #edf2f7;
-    --color-tx-muted: #8fa8c8;
-    --color-tx-subtle: #6b8eae;
+    --color-tx: #fdf0e0;
+    --color-tx-muted: #c4956a;
+    --color-tx-subtle: #9e7050;
 
-    --color-bd: #1e2d47;
-    --color-bd-strong: #2a3f63;
+    --color-bd: #3d2510;
+    --color-bd-strong: #5a3a1c;
 
-    --color-ac: #60a5fa;
-    --color-ac-fg: #0d1526;
+    --color-ac: #e8783d;
+    --color-ac-fg: #1a0f07;
   }
 }
 
