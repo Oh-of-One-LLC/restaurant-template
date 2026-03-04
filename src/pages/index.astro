@@ -1,9 +1,10 @@
 ---
-import Hero from "../components/hero/hero-2.astro";
+import Hero from "../components/hero/hero.astro";
 import Menu from "../components/menu/menu-single-page.astro";
-import Testimonials from "../components/testimonials/testimonials-2.astro";
+import Testimonials from "../components/testimonials/testimonials.astro";
+import Reservation from "../components/reservation/reservation.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { MENU_SECTIONS as menuSections } from "../config";
+import { MENU_SECTIONS as menuSections } from "../data/menu";
 ---
 
 <BaseLayout>
@@ -11,5 +12,6 @@ import { MENU_SECTIONS as menuSections } from "../config";
     <Hero />
     <Menu sections={menuSections} />
     <Testimonials />
+    <Reservation />
   </Fragment>
 </BaseLayout>

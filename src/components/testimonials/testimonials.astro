@@ -7,7 +7,7 @@ const stars = Array(5).fill(null);
 <section
   id="testimonials"
   aria-labelledby="testimonials-heading"
-  class="bg-surface text-text relative w-full px-16 py-24 md:py-32"
+  class="bg-brand text-brand-fg relative w-full px-16 py-24 md:py-32"
 >
   <div class="mx-auto max-w-3xl text-center">
     <!-- Stars -->
@@ -34,7 +34,8 @@ const stars = Array(5).fill(null);
       id="testimonials-heading"
       class="mb-14 text-4xl font-bold tracking-tight md:text-5xl"
     >
-      Don't take our word for it. Take theirs
+      Don't take our word for it. <br />
+      Take theirs.
     </h2>
 
     <!-- Slides — stacked in same grid cell so height is set by tallest -->
@@ -53,7 +54,7 @@ const stars = Array(5).fill(null);
               <footer>
                 <cite class="not-italic">
                   <span class="block font-bold">{t.name}</span>
-                  <span class="text-text-muted text-sm">{t.context}</span>
+                  <span class="text-brand-fg-muted text-sm">{t.context}</span>
                 </cite>
               </footer>
             </blockquote>
@@ -71,7 +72,7 @@ const stars = Array(5).fill(null);
       {
         testimonials.map((t, i) => (
           <button
-            class="testimonial-dot bg-border focus:ring-accent focus:ring-offset-surface h-2.5 w-2.5 cursor-pointer rounded-full transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
+            class="testimonial-dot bg-brand-fg-muted focus:ring-accent focus:ring-offset-brand h-2.5 w-2.5 cursor-pointer rounded-full transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
             data-index={i}
             role="tab"
             aria-label={`Testimonial from ${t.name}`}
@@ -85,7 +86,7 @@ const stars = Array(5).fill(null);
   <!-- Prev arrow -->
   <button
     id="testimonials-prev"
-    class="text-text-muted hover:text-text focus:ring-accent focus:ring-offset-surface absolute top-1/2 left-4 -translate-y-1/2 rounded-full p-3 transition focus:ring-2 focus:ring-offset-2 focus:outline-none md:left-8"
+    class="text-brand-fg-muted hover:text-brand-fg focus:ring-accent focus:ring-offset-brand absolute top-1/2 left-4 -translate-y-1/2 rounded-full p-3 transition focus:ring-2 focus:ring-offset-2 focus:outline-none md:left-8"
     aria-label="Previous testimonial"
   >
     <svg
@@ -107,7 +108,7 @@ const stars = Array(5).fill(null);
   <!-- Next arrow -->
   <button
     id="testimonials-next"
-    class="text-text-muted hover:text-text focus:ring-accent focus:ring-offset-surface absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-3 transition focus:ring-2 focus:ring-offset-2 focus:outline-none md:right-8"
+    class="text-brand-fg-muted hover:text-brand-fg focus:ring-accent focus:ring-offset-brand absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-3 transition focus:ring-2 focus:ring-offset-2 focus:outline-none md:right-8"
     aria-label="Next testimonial"
   >
     <svg
@@ -139,8 +140,8 @@ const stars = Array(5).fill(null);
     slides[current].classList.remove("opacity-100");
     slides[current].classList.add("opacity-0", "pointer-events-none");
     slides[current].setAttribute("aria-hidden", "true");
-    dots[current].classList.remove("bg-text");
-    dots[current].classList.add("bg-border");
+    dots[current].classList.remove("bg-brand-fg");
+    dots[current].classList.add("bg-brand-fg-muted");
     dots[current].setAttribute("aria-selected", "false");
 
     // Show next
@@ -148,8 +149,8 @@ const stars = Array(5).fill(null);
     slides[current].classList.remove("opacity-0", "pointer-events-none");
     slides[current].classList.add("opacity-100");
     slides[current].setAttribute("aria-hidden", "false");
-    dots[current].classList.remove("bg-border");
-    dots[current].classList.add("bg-text");
+    dots[current].classList.remove("bg-brand-fg-muted");
+    dots[current].classList.add("bg-brand-fg");
     dots[current].setAttribute("aria-selected", "true");
   }
 
