@@ -1,7 +1,6 @@
 ---
 import Hero from "../components/hero/hero-2.astro";
 import Menu from "../components/menu/menu-single-page.astro";
-import Services from "../components/services/services-1.astro";
 import Testimonials from "../components/testimonials/testimonials-2.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { MENU_SECTIONS as menuSections } from "../config";
@@ -11,7 +10,6 @@ import { MENU_SECTIONS as menuSections } from "../config";
   <Fragment slot="main">
     <Hero />
     <Menu sections={menuSections} />
-    <Services />
     <Testimonials />
   </Fragment>
 </BaseLayout>

@@ -1,38 +1,38 @@
 export const testimonials = [
   {
     quote:
-      "Smith & Sons showed up within the hour at 2am when our pipe burst. Absolute lifesavers — professional, calm, and had it sorted before sunrise.",
+      "The Margherita here is the real deal — blistered crust, fresh basil, just the right amount of char. I've been to Naples. This holds up.",
     name: "Sarah Mitchell",
-    context: "Homeowner, emergency repair",
+    context: "Regular diner",
   },
   {
     quote:
-      "We had a persistent leak under the kitchen sink that two other plumbers couldn't fix properly. These guys diagnosed it immediately and sorted it for good.",
+      "We brought a group of 10 for a birthday and they handled it perfectly. The Diavola was incredible — spicy, smoky, and gone in minutes.",
     name: "James Torres",
-    context: "Homeowner, kitchen plumbing",
+    context: "Group booking",
   },
   {
     quote:
-      "Used Smith & Sons for a full bathroom refit. Punctual, tidy, and the finished work is flawless. Highly recommend for any renovation job.",
+      "The Nutella calzone for dessert is dangerous. We ordered one to share and ended up getting a second. No regrets.",
     name: "Linda Rhodes",
-    context: "Homeowner, bathroom renovation",
+    context: "Date night",
   },
   {
     quote:
-      "We brought them in to replumb our restaurant kitchen. They worked around our schedule to minimise downtime. Couldn't ask for more.",
+      "Best wood-fired pizza in the city, full stop. The dough has a depth of flavour you just don't get anywhere else. We come every Friday.",
     name: "Mike Delaney",
-    context: "Restaurant owner, commercial fit-out",
+    context: "Weekly regular",
   },
   {
     quote:
-      "Our water heater packed in mid-winter. They had a new one installed the same day. Fair pricing and no upselling — just honest, good work.",
+      "Funghi & Fontina converted me from a tomato-base purist. The garlic oil base with those mushrooms is something else entirely.",
     name: "Carol Bentley",
-    context: "Homeowner, water heater replacement",
+    context: "First-time visitor",
   },
   {
     quote:
-      "Quick, no-fuss drain cleaning. Arrived on time, explained everything clearly, and left the place spotless. Will definitely call again.",
+      "Sitting near the oven watching the pizzas go in and come out in 90 seconds — the whole experience is just fantastic. Food and atmosphere both perfect.",
     name: "Tom Hargreaves",
-    context: "Landlord, drain maintenance",
+    context: "Anniversary dinner",
   },
 ];
