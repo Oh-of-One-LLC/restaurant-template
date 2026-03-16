@@ -11,7 +11,11 @@ const stars = Array(5).fill(null);
 >
   <div class="mx-auto max-w-3xl text-center">
     <!-- Stars -->
-    <div class="mb-6 flex justify-center gap-1" aria-label="5 out of 5 stars">
+    <div
+      class="mb-6 flex justify-center gap-1"
+      role="img"
+      aria-label="5 out of 5 stars"
+    >
       {
         stars.map(() => (
           <svg
@@ -65,19 +69,21 @@ const stars = Array(5).fill(null);
 
     <!-- Dot indicators -->
     <div
-      class="mt-10 flex justify-center gap-3"
+      class="mt-10 flex justify-center gap-0"
       role="tablist"
       aria-label="Testimonials"
     >
       {
         testimonials.map((t, i) => (
           <button
-            class="testimonial-dot bg-brand-fg-muted focus:ring-accent focus:ring-offset-brand h-2.5 w-2.5 cursor-pointer rounded-full transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
+            class="testimonial-dot focus:ring-accent focus:ring-offset-brand inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full focus:ring-2 focus:ring-offset-2 focus:outline-none"
             data-index={i}
             role="tab"
             aria-label={`Testimonial from ${t.name}`}
             aria-selected="false"
-          />
+          >
+            <span class="dot-indicator bg-brand-fg-muted block h-2.5 w-2.5 rounded-full transition-colors" />
+          </button>
         ))
       }
     </div>
@@ -140,8 +146,12 @@ const stars = Array(5).fill(null);
     slides[current].classList.remove("opacity-100");
     slides[current].classList.add("opacity-0", "pointer-events-none");
     slides[current].setAttribute("aria-hidden", "true");
-    dots[current].classList.remove("bg-brand-fg");
-    dots[current].classList.add("bg-brand-fg-muted");
+    dots[current]
+      .querySelector(".dot-indicator")!
+      .classList.remove("bg-brand-fg");
+    dots[current]
+      .querySelector(".dot-indicator")!
+      .classList.add("bg-brand-fg-muted");
     dots[current].setAttribute("aria-selected", "false");
 
     // Show next
@@ -149,8 +159,10 @@ const stars = Array(5).fill(null);
     slides[current].classList.remove("opacity-0", "pointer-events-none");
     slides[current].classList.add("opacity-100");
     slides[current].setAttribute("aria-hidden", "false");
-    dots[current].classList.remove("bg-brand-fg-muted");
-    dots[current].classList.add("bg-brand-fg");
+    dots[current]
+      .querySelector(".dot-indicator")!
+      .classList.remove("bg-brand-fg-muted");
+    dots[current].querySelector(".dot-indicator")!.classList.add("bg-brand-fg");
     dots[current].setAttribute("aria-selected", "true");
   }
 
